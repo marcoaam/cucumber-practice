@@ -1,8 +1,11 @@
 require 'sinatra/base'
 
 class Test < Sinatra::Base
+
+	set :views, './views'
+
   get '/' do
-    'Hello Test!'
+    erb :index
   end
 
   # start the server if ruby file executed directly

@@ -16,10 +16,6 @@ module WithinHelpers
 end
 World(WithinHelpers)
 
-Given /^(?:|I )am on (.+)$/ do |page_name|
-  visit path_to(page_name)
-end
-
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
@@ -216,4 +212,20 @@ end
 
 Then /^show me the page$/ do
   save_and_open_page
+end
+
+Given /^(?:|I )am on (.+)$/ do |page_name|
+  visit path_to(page_name)
+end
+
+Then /^I want to see "(.*?)"$/ do |arg1|
+  arg1 # express the regexp above with the code you wish you had
+end
+
+When /^I fill in a input box called "(.*?)" with "(.*?)"$/ do |arg1, arg2|
+  fill_in(arg1, :with => arg1)
+end
+
+Then /^I should see an input box called "(.*?)"$/ do |name|
+  fill_in(name, :with => "")
 end
