@@ -1,4 +1,4 @@
-cucumber-practice
+Cucumber Pratice
 =================
 
-Cucumber practice
+Test file to understand how cucumber works and how to write features, scenarios and steps.
